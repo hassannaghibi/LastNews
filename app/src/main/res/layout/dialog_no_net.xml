@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_rel_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/margin_large">
+
+    <RelativeLayout
+        android:id="@+id/dialog_rel_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/dialog_img_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_medium" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_rel_header"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/dialog_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="@string/dialog_tv_title"
+            android:textSize="@dimen/txt_size_large" />
+
+        <LinearLayout
+            android:id="@+id/dialog_lin_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dialog_tv_title"
+            android:layout_alignRight="@+id/dialog_tv_title"
+            android:layout_below="@+id/dialog_tv_title"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/dialog_btn_refresh"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_btn_setting" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/dialog_btn_setting"
+                style="@style/Base.Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/dialog_btn_refresh" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
