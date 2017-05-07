@@ -2,6 +2,8 @@ package ir.ncompany.lastnews;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.icu.text.DateFormat;
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,7 +19,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -39,6 +43,7 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     private HelperCache helperCache = new HelperCache();
+    private long date;
     private ArrayList<ModelNewsSport> modelNewsSports = new ArrayList<>();
     private ArrayList<RetroGetBBCNewsData> retroGetBBCNewsDatas = new ArrayList<>();
     private ArrayList<RealmNews> realmNewses = new ArrayList<>();
